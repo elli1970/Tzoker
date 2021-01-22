@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <title>ΟΠΑΠ - Τυχεροί αριθμοί Τζόκερ</title>
+
+  <link rel="stylesheet" media="screen" href="https://cpwebassets.codepen.io/assets/fullpage/fullpage-4de243a40619a967c0bf13b95e1ac6f8de89d943b7fc8710de33f681fe287604.css" />
+ 
+  <link rel="shortcut icon" href="C:\Users\elli3\OneDrive\Υπολογιστής\6oEPAL\exams\tzoker.jpg">
+
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+  <style>
+    html { font-size: 15px; }
+    html, body { margin: 0; padding: 0; min-height: 100%; }
+    body { height:100%; display: flex; flex-direction: column; }
+    .referer-warning {
+      background: black;
+      box-shadow: 0 2px 5px rgba(0,0,0, 0.5);
+      padding: 0.75em;
+      color: white;
+      text-align: center;
+      font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
+      line-height: 1.2;
+      font-size: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+    .referer-warning h1 { font-size: 1.2rem; margin: 0; }
+    .referer-warning a { color: #56bcf9; }
+  </style>
+</head>
+
+  <div id="result-iframe-wrap" role="main">
+
+    <iframe
+      id="result"
+      srcdoc="
+<!DOCTYPE html>
+<html lang=&quot;el&quot; >
+
+<head>
+
+  <meta charset=&quot;UTF-8&quot;>
+  <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+  <link rel=&quot;stylesheet&quot; href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css&quot; 
+  integrity=&quot;sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO&quot; crossorigin=&quot;anonymous&quot;>
+  
+  
+<style>
+@charset &quot;UTF-8&quot;;
+body {
+  background-color: #0d0d0d;
+  color: #6099D4;
+  
+  
+}
+
+header {
+  min-width: 850px;
+}
+
+.form-row {
+  align-items: flex-end;
+}
+
+header {
+  background-color: #333333;
+  
+}
+header h1 {
+  font-size: 1.5em;
+  padding: 0.3em;
+  padding-right: 1em;
+  border-right: 1px solid #999999;
+  color: #2F97F0;
+}
+header h1:before {
+  font-family: &quot;FontAwesome&quot;;
+  display: block;
+  border-radius: 50%;
+  background-color: #0d0d0d;
+  color: #FD1;
+  font-size: 1.2em;
+  line-height: 140%;
+  text-align: center;
+  position: absolute;
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: -1.95em;
+  margin-top: -0.225em;
+}
+
+.controls {
+  padding: 1em;
+}
+
+.results {
+  margin-top: 2em;
+}
+.results h1 {
+  color: #AAA;
+  font-size: 1em;
+}
+.results .numbers {
+  display: block;
+  padding-top:10px;
+}
+.results .numbers > .number {
+  display: inline-block;
+  font-size: 3em;
+  width: 2em;
+  height: 2em;
+  line-height: 200%;
+  margin: 0 0.2em;
+  font-weight: bold;
+  color: #333;
+  background-color: #FCE660;
+  border-radius: 50%;
+  box-shadow: 0px 10px 10px RGBA(0, 0, 0, 0.3), inset 0px -10px 30px RGBA(0, 0, 0, 0.6);
+  animation: show-number 0.5s ease-out;
+  animation-fill-mode: backwards;
+  margin-bottom: 1px;
+  text-shadow: 2px 2px 4px RGBA(0, 0, 0, 0.2);
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  width:600px
+
+}
+
+@keyframes show-number {
+  from {
+    opacity: 0;
+    transform: translate(0, 50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage(&quot;resize&quot;, &quot;*&quot;);
+  }
+</script>
+
+
+</head>
+
+<body translate=&quot;no&quot; >
+  <header class=&quot;controls d-flex justify-content-center align-items-center&quot;>
+      
+      <div class=&quot;heading mr-sm-2&quot;>
+        <h1 class=&quot;heading&quot;>Δημιουργία τυχαίων αριθμών από το 1 εώς το 45</h1>
+      </div>
+      
+      <div class=&quot;controls&quot;>
+        
+        <form class=&quot;form-row&quot;>
+
+          <div class=&quot;form-group mr-sm-4&quot;>
+            <label class=&quot;control-label&quot; for=&quot;numberSlots&quot;>Slots</label>
+            <input class=&quot;form-control&quot; name=&quot;numberSlots&quot; id=&quot;numberSlots&quot; size=&quot;3&quot; value=&quot;6&quot;>
+          </div>
+
+          <div class=&quot;form-group mr-sm-4&quot;>
+            <label class=&quot;control-label&quot; for=&quot;minNumber&quot;>Min Αριθμοί</label>
+            <input class=&quot;form-control&quot; name=&quot;minNumber&quot; id=&quot;minNumber&quot; size=&quot;3&quot; value=&quot;1&quot;>
+          </div>
+          
+          <div class=&quot;form-group mr-sm-4&quot;>
+            <label class=&quot;control-label&quot; for=&quot;maxNumber&quot;>Max Αριθμοί</label>
+            <input class=&quot;form-control&quot; name=&quot;maxNumber&quot; id=&quot;maxNumber&quot; size=&quot;3&quot; value=&quot;45&quot;>
+          </div>
+          
+          <div class=&quot;form-group submit-button&quot;>
+            <button type=&quot;button&quot; class=&quot;btn btn-primary&quot; onclick=&quot;getLockyNumbers();&quot;>Δημιουργία</button>
+          </div>
+
+        </form>
+
+      </div>
+
+
+    </header>
+
+<main class=&quot;container-fluid text-center&quot;>
+  
+  <section class=&quot;results p-2&quot; id=&quot;resultsContainer&quot;></section>
+
+</main>
+    
+     <script id=&quot;rendered-js&quot; >
+     &quot;use strict&quot;;
+// Animation delay multiplier for the number balls display sequence:
+const animationDelayMultiplier = 0.20;
+// build the numbers row:
+const _buildResultsHTML = numbers => {
+    return numbers.map((number, index) => {
+        const animationDelay = index * animationDelayMultiplier + 's';
+        return `<span class=&quot;number&quot; style=&quot;animation-delay: ${animationDelay};&quot;>${number}</span>`;
+    }).join('');
+};
+// Generate a single unique number:
+const _generateNumber = (numbersArray, numbersHTML, totalNumbers = 6, minNumber = 1, maxNumber = 45) => {
+    let number = Math.ceil(Math.random() * (maxNumber - minNumber + 1)) - 1 + minNumber;
+    const formatedNumber = number < 10 ? String('0' + number) : number;
+    return numbersArray.indexOf(formatedNumber) < 0 ? numbersArray.push(formatedNumber) : _generateNumber(...arguments);
+};
+// Helper function to get the value of an element by id:
+const getVal = id => parseInt(document.getElementById(id).value);
+// Main Function:
+const getLockyNumbers = () => {
+    // Create the Array to store the numbers and the string for HTML template:
+    const numbersArray = [];
+    let numbersHTML = '';
+    // Update the values:
+    const qtySlots = getVal('numberSlots');
+    const minNumber = getVal('minNumber');
+    const maxNumber = getVal('maxNumber');
+    // ---
+    // Start mapping the numbers:
+    if (maxNumber >= qtySlots) {
+        for (let i = 0; i < qtySlots; i++) {
+            _generateNumber(numbersArray, numbersHTML, qtySlots, minNumber, maxNumber);
+        }
+    }
+    else {
+        window.alert(&quot;Άκυρος αριθμός επιτρεπόμενων σλοτ.\nΔοκιμάστε ξανά.&quot;);
+    }
+    // Check if the numbers fill all the slots:
+    if (numbersArray.length === qtySlots) {
+        // order the numbers and convert it to html formated string:
+        const luckyNumbers = _buildResultsHTML(numbersArray.sort());
+        // Set the complete html:
+        const resultsTemplate = `<h1>Οι τυχεροί σας αριθμοί είναι:</h1><div class=&quot;numbers&quot;>${luckyNumbers}</div>`;
+        // Write the results in DOM:
+        document.getElementById('resultsContainer').innerHTML = resultsTemplate;
+    }
+};
+    </script>
+	<img src=https://www.armyvoice.gr/wp-content/uploads/2019/04/tzoker1.jpg>
+	
+    
+   
+</body>
+
+
+</html>
+ 
+"
+      sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation  allow-scripts allow-top-navigation-by-user-activation" allow="accelerometer; camera; encrypted-media; geolocation; gyroscope; microphone; midi" allowTransparency="true"
+      allowpaymentrequest="true" allowfullscreen="true" class="result-iframe">
+      </iframe>
+
+  </div>
+</body>
+</html>
